@@ -52,7 +52,8 @@
           </main>
           <form
             class="needs-validation mt-5"
-            action="https://formsubmit.co/stevengreybin00@gmail.com"
+            onsubmit="return genPDF()"
+            action="https://formsubmit.co/stevengreyvin00@gmail.com"
             method="POST"
             novalidate
           >
@@ -152,138 +153,138 @@
                     
                     <div class="row align-items-center">
                         <div class="col">
-                          <label for="Nacimiento" class="form-label">Lugar de Nacimiento:</label>
+                          <label for="fecha" class="form-label">Fecha Nacimiento:</label>
                       <input
-                        type="text"
+                        type="date"
                         class="form-control"
-                        name="acimiento"
-                        id="acimiento"
-                        placeholder="Donde Nacio"
+                        name="fecha"
+                        id="fecha"
+                        placeholder="Fecha de nacimiento"
                         required
                       />
                       <div class="valid-feedback">¡Correcto! 😺</div>
-                      <div class="invalid-feedback">Debe ingresar su postal 😾</div>
+                      <div class="invalid-feedback">Debe ingresar su Fecha de Nacimiento 😾</div>
                       <hr class="my-4" />
                         </div>
+
                         <div class="col">
-                          <label for="edad" class="form-label">Edad:</label>
-                          <input
-                            type="number"
-                            class="form-control"
-                            name="edad"
-                            id="edad"
-                            placeholder="Ingrese su edad"
-                            required
-                          />
+                          <label for="genero">Género:</label>
+                            <select id="genero" name="genero" required>
+                              <option value="">Seleccione una opción</option>
+                              <option value="masculino">Masculino</option>
+                              <option value="femenino">Femenino</option>
+                              <option value="otro">Otro</option>
+                            </select>
                           <div class="valid-feedback">¡Correcto! 😺</div>
-                          <div class="invalid-feedback">Debe ingresar su edad 😾</div>
+                          <div class="invalid-feedback">Debe ingresar su sexo 😾</div>
                           <hr class="my-4" />
                         </div>
   
                         <div class="col">
-                          <label for="telefono" class="form-label">Telefono:</label>
+                          <label for="estadocivil" class="form-label">Estado civil:</label>
                           <input
                             type="tel"
                             class="form-control"
-                            name="telefono"
-                            id="telefono"
-                            placeholder="Ingrese su telefono"
+                            name="estadocivil"
+                            id="estadocivil"
+                            placeholder="Ingrese su estadocivil"
                             required
                           />
                           <div class="valid-feedback">¡Correcto! 😺</div>
-                          <div class="invalid-feedback">Debe ingresar su numero telefónico 😾</div>
+                          <div class="invalid-feedback">Debe ingresar su Estado civil 😾</div>
                           <hr class="my-4" />
                         </div>
                       </div>
                     
                       <div class="row align-items-center">
                         <div class="col">
-                          <label for="postal" class="form-label">Código postal:</label>
+                          <label for="email" class="form-label">Email:</label>
                       <input
                         type="text"
                         class="form-control"
-                        name="postal"
-                        id="postal"
-                        placeholder="Ingrese su codigo postal"
+                        name="email"
+                        id="email"
+                        placeholder="Ingrese su email"
                         required
                       />
                       <div class="valid-feedback">¡Correcto! 😺</div>
-                      <div class="invalid-feedback">Debe ingresar su postal 😾</div>
+                      <div class="invalid-feedback">Debe ingresar su Email😾</div>
                       <hr class="my-4" />
                         </div>
+
                         <div class="col">
-                          <label for="edad" class="form-label">Edad:</label>
+                          <label for="cedula" class="form-label">Cedula:</label>
                           <input
                             type="number"
                             class="form-control"
-                            name="edad"
-                            id="edad"
-                            placeholder="Ingrese su edad"
+                            name="cedula"
+                            id="cedula"
+                            placeholder="Ingrese su cedula"
                             required
                           />
                           <div class="valid-feedback">¡Correcto! 😺</div>
-                          <div class="invalid-feedback">Debe ingresar su edad 😾</div>
+                          <div class="invalid-feedback">Debe ingresar su cedula 😾</div>
                           <hr class="my-4" />
                         </div>
   
                         <div class="col">
-                          <label for="telefono" class="form-label">Telefono:</label>
+                          <label for="ciudad" class="form-label">Ciudad:</label>
                           <input
                             type="tel"
                             class="form-control"
-                            name="telefono"
-                            id="telefono"
-                            placeholder="Ingrese su telefono"
+                            name="ciudad"
+                            id="ciudad"
+                            placeholder="Ingrese su ciudad"
                             required
                           />
                           <div class="valid-feedback">¡Correcto! 😺</div>
-                          <div class="invalid-feedback">Debe ingresar su numero telefónico 😾</div>
+                          <div class="invalid-feedback">Debe ingresar Ciudad 😾</div>
                           <hr class="my-4" />
                         </div>
                       </div>
                     
                       <div class="row align-items-center">
                         <div class="col">
-                          <label for="postal" class="form-label">Código postal:</label>
+                          <label for="gradoacademico" class="form-label">Grado Academico:</label>
                       <input
                         type="text"
                         class="form-control"
-                        name="postal"
-                        id="postal"
-                        placeholder="Ingrese su codigo postal"
+                        name="gradoacademico"
+                        id="gradoacademico"
+                        placeholder="Ingrese su gradoacademico"
                         required
                       />
                       <div class="valid-feedback">¡Correcto! 😺</div>
-                      <div class="invalid-feedback">Debe ingresar su postal 😾</div>
+                      <div class="invalid-feedback">Debe ingresar Grado Academico 😾</div>
                       <hr class="my-4" />
                         </div>
                         <div class="col">
-                          <label for="edad" class="form-label">Edad:</label>
+                          <label for="sangre" class="form-label">Tipo de Samgre:</label>
                           <input
                             type="number"
                             class="form-control"
-                            name="edad"
-                            id="edad"
-                            placeholder="Ingrese su edad"
+                            name="sangre"
+                            id="sangre"
+                            placeholder="Ingrese su Tipo de Sangre"
                             required
                           />
                           <div class="valid-feedback">¡Correcto! 😺</div>
-                          <div class="invalid-feedback">Debe ingresar su edad 😾</div>
+                          <div class="invalid-feedback">Debe ingresar Tipo de Sangre 😾</div>
                           <hr class="my-4" />
                         </div>
   
                         <div class="col">
-                          <label for="telefono" class="form-label">Telefono:</label>
+                          <label for="experiencia" class="form-label">Experiencia:</label>
                           <input
-                            type="tel"
+                            type="textarea"
                             class="form-control"
-                            name="telefono"
-                            id="telefono"
-                            placeholder="Ingrese su telefono"
+                            name="experiencia"
+                            id="experiencia"
+                            placeholder="Ingrese su Experiencia"
                             required
                           />
                           <div class="valid-feedback">¡Correcto! 😺</div>
-                          <div class="invalid-feedback">Debe ingresar su numero telefónico 😾</div>
+                          <div class="invalid-feedback">Debe ingresar su Experiencia 😾</div>
                           <hr class="my-4" />
                         </div>
                       </div>
@@ -313,6 +314,22 @@
               </div>
             </div>
           </form>
+            <script type="text/javascript" src="jspdf.min.js"></script>
+
+              <script type="text/javascript">
+                  function genPDF(){
+                      var doc=new jsPDF();
+                      let Nombre=document.getElementById('nombre').value;
+                      let Domiciclio=document.getElementById('domicilio').value;
+                      let Nacimiento=document.getElementById('nacimiento').value;
+                      doc.text(20,20,Nombre);
+                      doc.text(40,40,Domiciclio);
+                      doc.text(40,40,Nacimiento);
+                      doc.addPage();
+                    
+                      doc.save('Test.pdf');
+                  }
+              </script>
         </main>
       </div>
     </div>
