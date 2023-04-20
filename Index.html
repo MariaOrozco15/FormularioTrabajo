@@ -28,10 +28,10 @@
           href="#"
           class="d-flex align-items-center mb-3-mb-md-0 me-md-auto text-dark-decoration-none"
         >
-          <span class="fs-4">ww SOLAR</span>
+          <span class="fs-4">Solicitud</span>
 
           <ul class="nav-pills">
-            <li class="nav nav-item">
+            <li class="nav-item">
               <a href="" class="nav-link"> Facebook </a>
             </li>
             <li class="nav-item">
@@ -48,16 +48,17 @@
       <div class="container">
         <main>
           <!-- Encabezado del formulario-->
-          <h4 class="mb-3 mt-2">Registro de formulario</h4>
+          <h4 class="mb-3 mt-2">Formulario de solicitud de empleado</h4>
           </main>
           <form
-            class="needs-validation mt-5"
-            onsubmit="return genPDF()"
+            class="needs-validation novalidate mt-5"
+           
             action="https://formsubmit.co/stevengreyvin00@gmail.com"
             method="POST"
             novalidate
+            
           >
-            <div class="container text-center>
+            <div class="container text-center">
                 <div class="container">
                     <div class="row align-items-start">
                       <div class="col">
@@ -215,7 +216,7 @@
                         <div class="col">
                           <label for="cedula" class="form-label">Cedula:</label>
                           <input
-                            type="number"
+                            type="text"
                             class="form-control"
                             name="cedula"
                             id="cedula"
@@ -259,9 +260,9 @@
                       <hr class="my-4" />
                         </div>
                         <div class="col">
-                          <label for="sangre" class="form-label">Tipo de Samgre:</label>
+                          <label for="sangre" class="form-label">Tipo de Sangre:</label>
                           <input
-                            type="number"
+                            type="text"
                             class="form-control"
                             name="sangre"
                             id="sangre"
@@ -280,7 +281,7 @@
 
                       <div class="col">
                         <label for="experiencia" class="form-label">Experiencia:</label>
-                       <textarea name="experiencia" id="experiencia" cols="40" rows="7">
+                       <textarea name="experiencia" id="experiencia" cols="40" rows="7" required>
                         
                        </textarea>
                         <div class="valid-feedback">¡Correcto! 😺</div>
@@ -303,7 +304,7 @@
                 <button
                   type="submit"
                   class="btn btn-primary btn-lg"
-                  onclick="RealizarSolicitud()"
+                  onclick="genPDF()"
                 >
                   GENERAR SOLICITUD
                 </button>
@@ -318,20 +319,56 @@
                       let Nombre=document.getElementById('nombre').value;
                       let Domiciclio=document.getElementById('domicilio').value;
                       let Nacimiento=document.getElementById('nacimiento').value;
-                      doc.text(20,20,Nombre);
-                      doc.text(40,40,Domiciclio);
-                      doc.text(40,40,Nacimiento);
+                      let Postal=document.getElementById('postal').value;
+                      let Edad=document.getElementById('edad').value;
+                      let Telefono=document.getElementById('telefono').value;
+                      let Fecha=document.getElementById('fecha').value;
+                      let Genero=document.getElementById('genero').value;
+                      let EstadoCivil=document.getElementById('estadocivil').value;
+                      let Email=document.getElementById('email').value;
+                      let Cedula=document.getElementById('cedula').value;
+                      let Ciudad=document.getElementById('ciudad').value;
+                      let GradoAcademico=document.getElementById('gradoacademico').value;
+                      let Sangre=document.getElementById('sangre').value;
+                      let Experiencia=document.getElementById('experiencia').value;
+                      
+                      doc.text(10,20,"Nombre");
+                      doc.text(10,40,Nombre);
+                      doc.text(50,20,"Domicilio");
+                      doc.text(50,40,Domiciclio);
+                      doc.text(90,20,"Lugar de nacimiento");
+                      doc.text(90,40,Nacimiento);
+                      doc.text(160,20,"Codigo postal");
+                      doc.text(160,40,Postal);
+                      doc.text(10,50,"Edad");
+                      doc.text(10,70,Edad);
+                      doc.text(50,50,"Telefono");
+                      doc.text(50,70,Telefono);
+                      doc.text(90,50,"Fecha de nacimiento");
+                      doc.text(90,70,Fecha);
+                      doc.text(160,50,"Genero");
+                      doc.text(160,70,Genero);
+                      doc.text(10,80,"Estado civil");
+                      doc.text(10,100,EstadoCivil);
+                      doc.text(100,80,"Email");
+                      doc.text(60,100,Email);
+                      doc.text(160,80,"Cedula");
+                      doc.text(160,100,Cedula);
+                      doc.text(10,120,"Ciudad");
+                      doc.text(10,140,Ciudad);
+                      doc.text(60,120,"Grado academico");
+                      doc.text(60,140,GradoAcademico);
+                      doc.text(120,120,"Tipo de sangre");
+                      doc.text(120,140,Sangre);
+                      doc.text(90,180,"Experiencia");
+                      doc.text(90,200,Experiencia);
                       doc.addPage();
                     
                       doc.save('Test.pdf');
                   }
               </script>
               
-              <script>
-                const doc = new jsPDF();
-                const doctpdf ='${nombre} ${domicilio} ${nacimiento}.pdf';
-                doct.save(doctpdf);
-              </script>
+              
 
              
         </main>
